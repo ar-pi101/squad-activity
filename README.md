@@ -15,12 +15,10 @@ Due to government regulation, the system should provide us with the ability to f
 
 We interact with the system via a file-based input system, i.e. it should accept a filename as an input. The file referenced by filename will contain a set of commands separated by a newline, we need to execute the commands in order and produce output.
 
-## Environment
+## Requirements
+- Python 2.7
+- ```unittest``` python module
 
-```bash
-version : 1.0
-environment : python2.7
-```
 ## How to run
 
 The bash file *parking_lot* is used to take filepath. Run the below command in the home directory of the project.
@@ -79,3 +77,21 @@ Initially, the command *Create_parking_lot* is used to create a complete new par
 - *Slot_number_for_car_with_number* – First checked if there exist a car with the defined registration number, then displays the respective parking slot number
 - *Vehicle_registration_number_for_driver_of_age* - First checked if there exist a driver with the defined age, then displays the respective vehicle registration numbers separated by commas
 
+# Unittest
+You can perform unit testing in following manner:
+
+```python
+python tests/test_parking_lot.py
+```
+
+Output will be the sequence of operations results:
+
+```bash
+Created a parking of 6 slots
+Car with vehicle registration number MH-12-FF-2017 has been parked at slot number 1
+Slot number 1 vacated, the car with vehicle registration number MH-12-FF-2017 left the space, the driver of the car was of age 21
+
+Ran 3 tests in 0.001s
+
+OK
+```
